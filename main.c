@@ -47,7 +47,7 @@ if (!access("main.cpp", F_OK)){
         printf("Error creating main.\n");
         return(0);
     }
-    fprintf(file, headermaker("main.cpp"));
+    fprintf(file, "%s", headermaker("main.cpp"));
     fprintf(file, "\n\n");
     fprintf(file, "int main(void) {}\n");
     return(0);
