@@ -10,6 +10,7 @@ If wanted, it also includes the standard 42 header. You will have to modify the 
 The version 1.0 was written by @fsandel.
 
 **Prerequisites**
+
 To use the Class Template Generator, ensure that you have the following software installed on your system:
 
 C++ compiler (GCC or Clang)
