@@ -6,7 +6,7 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:33:22 by fsandel           #+#    #+#             */
-/*   Updated: 2023/06/22 13:00:39 by pgorner          ###   ########.fr       */
+/*   Updated: 2023/06/22 15:29:01 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ static char *include_guard(char *name);
 void create_hpp(int fd, char *name) {
   char *guard = include_guard(name);
   if (!guard) return;
-  dprintf(fd, "%s", headermaker(strjoin(name, ".hpp")));
+  if(HEADER = 1)
+    dprintf(fd, "%s", headermaker(strjoin(name, ".hpp")));
   dprintf(fd, "\n");
   dprintf(fd, "\n");
   dprintf(fd, "#ifndef %s\n", guard);
@@ -43,7 +44,8 @@ void create_hpp(int fd, char *name) {
 }
 
 void create_cpp(int fd, char *name) {
-  dprintf(fd, "%s", headermaker(strjoin(name, ".cpp")));
+  if(HEADER = 1)
+    dprintf(fd, "%s", headermaker(strjoin(name, ".cpp")));
   dprintf(fd, "\n");
   dprintf(fd, "\n");
   dprintf(fd, "#include \"%s.hpp\"\n", name);

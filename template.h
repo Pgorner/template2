@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   template.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pgorner <pgorner@student.42.fr>            +#+  +:+       +#+        */
+/*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:35:33 by fsandel           #+#    #+#             */
-/*   Updated: 2023/06/22 12:56:43 by pgorner          ###   ########.fr       */
+/*   Updated: 2023/06/22 15:29:17 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 /*############################################################################*/
 #define USERNAME "pgorner"
 #define USEREMAIL "pgorner@student.42heilbronn.de"
-
+#define HEADER 1 // SET TO 0 IF HEADER UNWANTED
 /*############################################################################*/
 #define MAX_TEMPLATE_LENGTH 1000
 #define LOGO_LENGTH 52

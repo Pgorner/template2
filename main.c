@@ -6,29 +6,11 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:40:06 by fsandel           #+#    #+#             */
-/*   Updated: 2023/06/22 15:17:31 by pgorner          ###   ########.fr       */
+/*   Updated: 2023/06/22 15:28:44 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "template.h"
-
-int header(int fd) {
-    FILE* headerfile = fopen("output.txt", "r");
-    if (headerfile == NULL) {
-        printf("Failed to open the headerfile.\n");
-        return 1;
-    }
-
-    char buffer[256];
-    size_t bytesRead;
-    while ((bytesRead = fread(buffer, sizeof(char), sizeof(buffer), headerfile)) > 0) {
-        write(fd, buffer, bytesRead);
-    }
-
-    fclose(headerfile);
-
-    return 0;
-}
 
 int getFileDescriptor(FILE* file) {
     int fd = fileno(file);
@@ -47,7 +29,8 @@ if (!access("main.cpp", F_OK)){
         printf("Error creating main.\n");
         return(0);
     }
-    fprintf(file, "%s", headermaker("main.cpp"));
+    if(HEADER = 1)
+      fprintf(file, "%s", headermaker("main.cpp"));
     fprintf(file, "\n");
     for(int i = 0; filenames[i]; i++)
       fprintf(file, "#include \"%s\"\n", strjoin(filenames[i], ".hpp"));
@@ -69,7 +52,8 @@ int makefile(char *name, char **filenames){
         printf("Error creating file.\n");
         return(0);
     }
-    header(getFileDescriptor(file));
+    if(HEADER = 1)
+      fprintf(file, "%s", headermaker("main.cpp"));
     fprintf(file, "#	███╗   ███╗ █████╗ ██╗  ██╗███████╗███████╗██╗██╗     ███████╗\n");
     fprintf(file, "#	████╗ ████║██╔══██╗██║ ██╔╝██╔════╝██╔════╝██║██║     ██╔════╝\n");
     fprintf(file, "#	██╔████╔██║███████║█████╔╝ █████╗  █████╗  ██║██║     █████╗\n");
