@@ -14,6 +14,7 @@ The version 1.0 was written by @fsandel.
 To use the Class Template Generator, ensure that you have the following software installed on your system:
 
 C++ compiler (GCC or Clang)
+
 Zsh shell (for automatic alias setup)
 
 **Installation**
@@ -41,6 +42,7 @@ Follow the on-screen instructions to provide the necessary input, such as progra
 Once the files are generated, you will find the output files in the current directory.
 
 **License**
+
 This project is licensed under the MIT License.
 
 Feel free to customize and adapt the generated files to suit your needs. Happy coding!
