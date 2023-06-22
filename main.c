@@ -6,7 +6,7 @@
 /*   By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 11:40:06 by fsandel           #+#    #+#             */
-/*   Updated: 2023/06/22 12:58:06 by pgorner          ###   ########.fr       */
+/*   Updated: 2023/06/22 15:17:31 by pgorner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int getFileDescriptor(FILE* file) {
     return fd;
 }
 
-int mainmaker(){
+int mainmaker(char **filenames){
 if (!access("main.cpp", F_OK)){
       printf("------------------------------------------------------------------\n");
       printf("|                     MAIN ALREADY EXISTS                        |\n");
@@ -48,7 +48,11 @@ if (!access("main.cpp", F_OK)){
         return(0);
     }
     fprintf(file, "%s", headermaker("main.cpp"));
-    fprintf(file, "\n\n");
+    fprintf(file, "\n");
+    for(int i = 0; filenames[i]; i++)
+      fprintf(file, "#include \"%s\"\n", strjoin(filenames[i], ".hpp"));
+    fprintf(file, "\n");
+    fprintf(file, "\n");
     fprintf(file, "int main(void) {}\n");
     return(0);
 }
@@ -277,6 +281,7 @@ int full() {
     i++;
     }
     makefile(program_name, splitted);
+    mainmaker(splitted);
     return 0;
 }
 
@@ -301,7 +306,6 @@ int main(int argc, char *argv[]) {
       printf("|                    -enter program name below-                  |\n");
       printf("------------------------------------------------------------------\n");
       full();
-      mainmaker();
       exit(0);
     }
     else if (strcmp(input, "single") == 0) {
@@ -310,7 +314,6 @@ int main(int argc, char *argv[]) {
       printf("|                    -enter class name below-                    |\n");
       printf("------------------------------------------------------------------\n");
       single();
-      mainmaker();
       exit(0);
     }
     else {
