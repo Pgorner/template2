@@ -6,7 +6,7 @@
 #    By: pgorner <pgorner@student.42heilbronn.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 10:30:26 by fsandel           #+#    #+#              #
-#    Updated: 2023/06/22 15:25:25 by pgorner          ###   ########.fr        #
+#    Updated: 2023/06/22 15:26:21 by pgorner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,10 +29,8 @@ install:
 	fi
 	@echo "Successfully installed template"
 
-
-
 $(NAME):$(OBJ)
-	@$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(LIBFT)
+	@$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
 
 
 %.o:%.c
@@ -46,11 +44,5 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
-
-
-$(LIBFT):
-		make -C $(LIBFT_DIR)
-
-libft:	$(LIBFT)
 
 .PHONY: all clean fclean re
