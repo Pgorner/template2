@@ -31,51 +31,6 @@ Examples
 Full Build
 Here's an example of a full build using Template Builder:
 
-sql
-Copy code
-$ ./template_builder
-------------------------------------------------------------------
-|                Welcome to Template Builder                     |
-------------------------------------------------------------------
-|Template Builder can either create all necessary templates or   |
-|just single ones.                                               |
-|Full build means Makefile and any amount of classes with .cpp & |
-|.hpp with OCC classes                                           |
-|Single build means one class with matching .cpp & .hpp          |
-|Type "single" for single build and "full" for full build        |
-------------------------------------------------------------------
-full
-------------------------------------------------------------------
-|                         full confirmed                         |
-|                    -enter program name below-                  |
-------------------------------------------------------------------
-MyProgram
-------------------------------------------------------------------
-| Enter all needed class names separated by spaces               |
-| Press enter when done                                          |
-------------------------------------------------------------------
-Class1 Class2 Class3
-------------------------------------------------------------------
-Class names:
-Class1
-Class2
-Class3
-------------------------------------------------------------------
-Making class: Class1
-Making class: Class2
-Making class: Class3
-------------------------------------------------------------------
-|                     MAKEFILE ALREADY EXISTS                    |
-------------------------------------------------------------------
-------------------------------------------------------------------
-|                     MAIN ALREADY EXISTS                        |
-------------------------------------------------------------------
-Single Build
-Here's an example of a single build using Template Builder:
-
-sql
-Copy code
-$ ./template_builder
 ------------------------------------------------------------------
 |                Welcome to Template Builder                     |
 ------------------------------------------------------------------
@@ -101,6 +56,8 @@ MyClass1
 ------------------------------------------------------------------
 |                     MAIN ALREADY EXISTS                        |
 ------------------------------------------------------------------
+
+
 License
 This project is licensed under the MIT License.
 
