@@ -21,14 +21,14 @@ Build and install the program using the provided Makefile:
 make install
 This will create an alias named "template" that points to the executable file of the Class Template Generator.
 
-Usage
+**Usage
 The program will prompt you to choose between a full build or a single build. Enter either full or single to proceed.
 Full Build: This option generates a Makefile and multiple class files as well as a main(.cpp and .hpp) based on your input.
 Single Build: This option creates a single class file(.cpp and .hpp) based on your input.
 Follow the on-screen instructions to provide the necessary input, such as program name and class names.
 Once the files are generated, you will find the output files in the current directory.
 Examples
-Full Build
+Full Build**************
 Here's an example of a full build using Template Builder:
 ------------------------------------------------------------------
 |                Welcome to Template Builder                     |
