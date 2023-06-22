@@ -13,12 +13,19 @@ C++ compiler (GCC or Clang)
 Zsh shell (for automatic alias setup)
 
 Installation
+
 Clone this repository to your local machine:
+
 git clone git@github.com:Pgorner/template2.git
+
 Navigate to the project directory:
+
 cd template2
+
 Build and install the program using the provided Makefile:
+
 make install
+
 This will create an alias named "template" that points to the executable file of the Class Template Generator.
 
 Usage
