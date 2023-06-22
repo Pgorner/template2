@@ -19,8 +19,8 @@ CFLAGS		=
 install:
 	@make all
 	@make clean
-	@alias template=$(PWD)/$(NAME)
-	@echo >> ~/.zshrc "alias template=$(PWD)/$(NAME)"
+	@cp $(NAME) /Users/${USER}
+	@echo "alias template=/Users/${USER}/$(NAME)" >> ~/.zshrc
 	@echo "Successfully installed template"
 
 all:	$(NAME)
